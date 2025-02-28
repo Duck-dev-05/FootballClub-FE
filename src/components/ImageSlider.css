@@ -1,0 +1,282 @@
+.image-slider {
+    position: relative;
+    width: 100%; /* Full width */
+    margin: auto; /* Center the slider */
+    overflow: hidden; /* Hide overflow to prevent images from spilling out */
+    height: 500px; /* Set a fixed height for better visibility */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.slider-image {
+    width: 100%; /* Set width to 100% to fill the container */
+    height: 100%; /* Set height to 100% to fill the container */
+    display: none; /* Hide all images by default */
+    position: absolute; /* Position images absolutely */
+    top: 0;
+    left: 0;
+    object-fit: cover; /* Ensure the entire image is visible */
+    transition: opacity 1s ease-in-out; /* Smooth transition for fading */
+}
+
+.slider-image.active {
+    display: block; /* Show the active image */
+    opacity: 1; /* Fully visible */
+}
+
+.slider-image:not(.active) {
+    opacity: 0; /* Hidden images */
+}
+
+/* Navigation buttons */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly more opaque background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+    padding: 10px; /* Padding for buttons */
+    z-index: 10; /* Ensure buttons are above images */
+    border-radius: 5px; /* Rounded corners for buttons */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.nav-button.left {
+    left: 10px; /* Position left button */
+}
+
+.nav-button.right {
+    right: 10px; /* Position right button */
+}
+
+.nav-button:hover {
+    background-color: rgba(255, 255, 255, 1); /* Fully opaque on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Indicators */
+.indicators {
+    position: absolute;
+    bottom: 10px; /* Position indicators at the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center indicators */
+    display: flex; /* Flexbox for layout */
+}
+
+.indicator {
+    width: 12px; /* Width of the indicator */
+    height: 12px; /* Height of the indicator */
+    border-radius: 50%; /* Circular shape */
+    background-color: rgba(255, 255, 255, 0.5); /* Inactive color */
+    margin: 0 5px; /* Space between indicators */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.indicator.active {
+    background-color: #007BFF; /* Active color */
+    transform: scale(1.2); /* Slightly enlarge active indicator */
+}
+
+.indicator:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Change color on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .image-slider {
+        height: 300px; /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-slider {
+        height: 200px; /* Further adjust height for very small screens */
+    }
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.slide-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.7) 100%
+    );
+    padding: 40px 0;
+}
+
+.slide-content {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+    color: white;
+}
+
+.slide-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.slide-subtitle {
+    font-size: 24px;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.slider-button {
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    transition: background-color 0.3s ease;
+    pointer-events: auto;
+}
+
+.slider-button:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .slider-container {
+        height: 500px;
+    }
+
+    .slide-title {
+        font-size: 36px;
+    }
+
+    .slide-subtitle {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider-container {
+        height: 400px;
+    }
+
+    .slide-title {
+        font-size: 28px;
+    }
+
+    .slide-subtitle {
+        font-size: 16px;
+    }
+
+    .slider-button {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-container {
+        height: 300px;
+    }
+
+    .slide-title {
+        font-size: 24px;
+    }
+
+    .slide-subtitle {
+        font-size: 14px;
+    }
+}
+
+/* Add these new styles for white overlay */
+.slide-overlay.white {
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.9) 100%
+    );
+}
+
+.slide-content.white-text {
+    color: #333; /* Dark text for white background */
+}
+
+.slide-content.white-text .slide-title {
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.slide-content.white-text .slide-subtitle {
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+/* Keep all existing styles and add these modifications */
+.white-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+}
+
+/* Update the slider button styles for better visibility on white background */
+.white-overlay .slider-button {
+    background: rgba(0, 0, 0, 0.3);
+    color: #333;
+}
+
+.white-overlay .slider-button:hover {
+    background: rgba(0, 0, 0, 0.5);
+} 
