@@ -51,6 +51,9 @@ const teamLogos = {
   'Valencia Academy': valenciaLogo,
   'Ajax Youth': ajaxLogo
 };
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 const App = () => {
@@ -63,8 +66,12 @@ const App = () => {
             <Route path="/posts/:postId" element={<PostDetail />} />
             <Route path="/" element={<HomePage />} />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             <Route path="/test" element={<TestComponent />} />
             <Route path="/gallery" element={<Gallery />} />
+=======
+            <Route path="/gallery" element={<MatchGallery />} />
+>>>>>>> Stashed changes
             <Route path="/about/overview" element={<ClubOverview />} />
             <Route path="/about/our-team" element={<OurTeam />} />
 =======
@@ -91,6 +98,9 @@ const App = () => {
             <Route path="/news" element={<NewsList news={newsData} />} />
             <Route path="/contact" element={<ContactUs />} />
             <Route path="/team-photos" element={<TeamPhotos />} />
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
           </Routes>
         </main>
