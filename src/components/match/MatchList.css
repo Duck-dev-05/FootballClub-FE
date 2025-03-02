@@ -1,0 +1,82 @@
+.match-list {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.match-list-header {
+    margin-bottom: 32px;
+}
+
+.match-list-header h2 {
+    margin: 0 0 24px 0;
+    color: #333;
+    font-size: 2rem;
+}
+
+.competition-filter {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.filter-button {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-button:hover {
+    background: #f5f5f5;
+    border-color: #ccc;
+}
+
+.filter-button.active {
+    background: #1e88e5;
+    border-color: #1e88e5;
+    color: #ffffff;
+}
+
+.matches-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.no-matches {
+    text-align: center;
+    padding: 48px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.no-matches p {
+    color: #666;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .match-list {
+        padding: 16px;
+    }
+
+    .match-list-header h2 {
+        font-size: 1.5rem;
+        margin-bottom: 16px;
+    }
+
+    .competition-filter {
+        gap: 8px;
+    }
+
+    .filter-button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+} 

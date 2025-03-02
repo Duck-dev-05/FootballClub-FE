@@ -1,0 +1,129 @@
+.match-overview {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.teams-score-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.team {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.team-logo {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    background: #f8fafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.team-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 8px;
+    transition: transform 0.2s ease;
+}
+
+.team-logo:hover .team-logo-img {
+    transform: scale(1.05);
+}
+
+.team-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e293b;
+    text-align: center;
+}
+
+.score-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 24px;
+    background: #f8fafc;
+    border-radius: 12px;
+}
+
+.score {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e3c72;
+}
+
+.score-divider {
+    color: #94a3b8;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+    .match-overview {
+        padding: 24px;
+    }
+
+    .teams-score-container {
+        gap: 16px;
+    }
+
+    .team-logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .team-name {
+        font-size: 1rem;
+    }
+
+    .score {
+        font-size: 2rem;
+    }
+
+    .score-container {
+        padding: 12px 16px;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .match-overview {
+        padding: 16px;
+    }
+
+    .teams-score-container {
+        gap: 12px;
+    }
+
+    .team-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .team-name {
+        font-size: 0.875rem;
+    }
+
+    .score {
+        font-size: 1.5rem;
+    }
+
+    .score-container {
+        padding: 8px 12px;
+        gap: 8px;
+    }
+} 

@@ -1,0 +1,120 @@
+.match-events {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 24px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.match-events h3 {
+    margin: 0 0 20px 0;
+    color: #333;
+    font-size: 1.25rem;
+}
+
+.events-container {
+    display: flex;
+    gap: 32px;
+}
+
+.half {
+    flex: 1;
+}
+
+.half h4 {
+    margin: 0 0 16px 0;
+    color: #666;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.events-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.match-event {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.event-time {
+    min-width: 32px;
+    color: #666;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.event-content {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.event-icon {
+    font-size: 1.2rem;
+}
+
+.event-icon.goal {
+    color: #4CAF50;
+}
+
+.event-icon.yellow {
+    color: #FFC107;
+}
+
+.event-icon.red {
+    color: #f44336;
+}
+
+.event-icon.substitution {
+    color: #2196F3;
+}
+
+.event-icon.var {
+    color: #9C27B0;
+}
+
+.event-icon.injury {
+    color: #f44336;
+}
+
+.event-details {
+    flex: 1;
+}
+
+.event-player {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.event-assist,
+.event-description,
+.event-replaced {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+    .match-events {
+        padding: 16px;
+    }
+
+    .events-container {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .event-time {
+        min-width: 24px;
+    }
+
+    .event-content {
+        gap: 8px;
+    }
+} 
