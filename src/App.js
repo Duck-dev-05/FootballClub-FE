@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< Updated upstream
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+=======
+import { BrowserRouter as Router, Routes, Route, Switch } from 'react-router-dom';
+>>>>>>> Stashed changes
 import './App.css';
 import Navbar from './components/Navbar';
 import HomePage from './components/HomePage';
@@ -25,6 +29,7 @@ import TrainingSchedule from './components/TrainingSchedule';
 import ContactUs from './components/ContactUs';
 import Gallery from './components/Gallery';
 import TournamentInfo from './components/TournamentInfo';
+<<<<<<< Updated upstream
 import TournamentRegistration from './components/TournamentRegistration';
 import TeamPhotos from './components/TeamPhotos';
 import NewsList from './components/news/NewsList';
@@ -54,6 +59,11 @@ const teamLogos = {
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
+>>>>>>> Stashed changes
+=======
+import NewsPage from './components/NewsPage';
+import CreatePost from './components/CreatePost';
+import PostDetails from './components/PostDetails';
 >>>>>>> Stashed changes
 
 const App = () => {
@@ -97,10 +107,16 @@ const App = () => {
             <Route path="/news/:id" element={<NewsDetail news={newsData} />} />
             <Route path="/news" element={<NewsList news={newsData} />} />
             <Route path="/contact" element={<ContactUs />} />
+<<<<<<< Updated upstream
             <Route path="/team-photos" element={<TeamPhotos />} />
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
+>>>>>>> Stashed changes
+=======
+            <Route path="/news" element={<NewsPage />} />
+            <Route path="/news/:postId" element={<PostDetails />} />
+            <Route path="/news/create" element={<CreatePost />} />
 >>>>>>> Stashed changes
           </Routes>
         </main>

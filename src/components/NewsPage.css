@@ -1,0 +1,42 @@
+.news-page {
+    padding: 20px; /* Add padding around the news page */
+    background-color: #f9f9f9; /* Light background for contrast */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.news-page h1 {
+    font-size: 2em; /* Larger font size for the title */
+    color: #333; /* Dark color for the title */
+    margin-bottom: 20px; /* Space below the title */
+    text-align: center; /* Center the title */
+}
+
+.news-list {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: space-around; /* Space around items */
+}
+
+.news-item {
+    flex: 1 1 calc(30% - 20px); /* Responsive item width */
+    margin: 10px; /* Space around each item */
+    min-width: 250px; /* Minimum width for items */
+    transition: transform 0.3s; /* Smooth scaling effect */
+}
+
+.news-item:hover {
+    transform: scale(1.02); /* Slightly scale up on hover */
+}
+
+/* Optional: Add media query for responsiveness */
+@media (max-width: 768px) {
+    .news-item {
+        flex: 1 1 calc(45% - 20px); /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .news-item {
+        flex: 1 1 100%; /* Stack items on very small screens */
+    }
+} 
