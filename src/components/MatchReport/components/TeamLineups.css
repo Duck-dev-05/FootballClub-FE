@@ -1,0 +1,21 @@
+.lineups {
+    padding: 2rem 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+}
+
+.lineups h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.lineups-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+} 

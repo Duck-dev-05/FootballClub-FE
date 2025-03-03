@@ -1,0 +1,174 @@
+.match-detail {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 1rem;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-bottom: 24px;
+}
+
+.back-button:hover {
+    color: #333;
+}
+
+.match-header {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.match-meta {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.match-meta h2 {
+    margin: 0 0 8px 0;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.match-date {
+    color: #666;
+    font-size: 1rem;
+}
+
+.match-teams {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+}
+
+.team-logo {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.team-name {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #333;
+    text-align: center;
+}
+
+.match-score {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.separator {
+    color: #999;
+}
+
+.match-summary {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.match-summary h3 {
+    margin: 0 0 16px 0;
+    color: #333;
+    font-size: 1.25rem;
+}
+
+.match-summary p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0 0 16px 0;
+}
+
+.key-moments {
+    margin-top: 24px;
+}
+
+.key-moments h4 {
+    margin: 0 0 12px 0;
+    color: #333;
+    font-size: 1rem;
+}
+
+.key-moments ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.key-moments li {
+    color: #666;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.key-moments li:last-child {
+    border-bottom: none;
+}
+
+.match-not-found {
+    text-align: center;
+    padding: 48px;
+}
+
+.match-not-found h2 {
+    margin: 0 0 24px 0;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .match-detail {
+        padding: 16px;
+    }
+
+    .match-header {
+        padding: 24px 16px;
+    }
+
+    .match-teams {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .team {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .team-logo {
+        width: 64px;
+        height: 64px;
+    }
+
+    .match-score {
+        order: -1;
+    }
+} 

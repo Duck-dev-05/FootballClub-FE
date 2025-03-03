@@ -1,0 +1,54 @@
+/* BuyTickets.css */
+
+.buy-tickets-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.ticket-option {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.ticket-option input {
+    margin-right: 10px;
+}
+
+.ticket-details {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    background-color: #e7f1ff;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.payment-details {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    background-color: #e7f1ff;
+} 

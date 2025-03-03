@@ -1,0 +1,157 @@
+.fan-moments {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.moments-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.moments-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.moments-header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.photo-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.photo-item:hover {
+    transform: translateY(-5px);
+}
+
+.photo-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.photo-item:hover img {
+    transform: scale(1.05);
+}
+
+.photo-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.photo-item:hover .photo-caption {
+    opacity: 1;
+}
+
+.photo-caption p {
+    margin: 0;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* Lightbox styles */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90vh;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+}
+
+.lightbox-caption {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.close-button {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.close-button:hover {
+    color: #ddd;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .fan-moments {
+        padding: 1rem;
+    }
+
+    .moments-header h1 {
+        font-size: 2rem;
+    }
+
+    .moments-header p {
+        font-size: 1rem;
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1rem;
+    }
+
+    .photo-item img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+} 
